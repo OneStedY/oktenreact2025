@@ -11,7 +11,7 @@ export const CoursesComponent = () =>{
         <ul>
             {
                 coursesAndDurationArray.map((course:CourseModel, index:number) =>{
-                    return <CourseComponent course={course} key={index} />;
+                    return <CourseComponent course={course} key={index} PropsType={undefined} />;
                 })
             }
         </ul>
