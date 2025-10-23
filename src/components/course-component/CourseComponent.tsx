@@ -4,7 +4,8 @@ import type {CourseModel} from "../../models/CourseModel.ts";
 
 
 type PropsType = {
-    course: CourseModel
+    course: CourseModel,
+    PropsType?: undefined
 }
 export const CourseComponent: FC<PropsType> = ({course}) => {
     return (
