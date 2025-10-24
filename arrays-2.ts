@@ -1,4 +1,4 @@
-import {CourseModel} from "./src/models/CourseModel";
+import type {CourseModel} from "./src/models/CourseModel";
 
 
 export const coursesAndDurationArray:CourseModel[] = [
