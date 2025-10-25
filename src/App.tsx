@@ -1,21 +1,12 @@
-
-import './App.css'
-
-
-import {Posts} from "./components/posts-component/Posts.tsx";
+import "./App.css";
+import { Products } from "./components/products-component/Products.tsx";
 
 function App() {
+    return (
+        <div>
 
-
-  return (
-    <>
-      <div>
-
-          <Posts/>
-
-      </div>
-    </>
-  )
+            <Products/>
+        </div>
+    );
 }
-
-export default App
+export default App;
