@@ -11,8 +11,8 @@ function App() {
     <>
       <div>
         {/*<Todos/>*/}
-        {/*  <Posts/>*/}
-          <Comments/>
+          <Posts/>
+          {/*<Comments/>*/}
       </div>
     </>
   )

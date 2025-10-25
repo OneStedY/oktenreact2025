@@ -1,30 +1,27 @@
-import type {TodoModel} from "../models/TodoModel.ts";
-import type {PostModel} from "../models/PostModel.ts";
-import type {CommentModel} from "../models/CommentModel.ts";
+import {TodoModel} from "../models/TodoModel.ts";
+import {PostModel} from "../models/PostModel.ts";
+import {CommentModel} from "../models/CommentModel.ts";
+import {PostResponseDummyjson} from "../models/PostResponseDummyjson.ts";
 
-const endPointTodos = import.meta.env.VITE_API_URL + '/todos'
-const endPointPosts = import.meta.env.VITE_API_URL + '/posts'
-const endPointComments = import.meta.env.VITE_API_URL + '/comments'
+const endpointTodos = import.meta.env.VITE_API_BASE_URL + '/todos'
+const endpointPosts = import.meta.env.VITE_API_BASE_URL + '/posts'
+const endpointComments = import.meta.env.VITE_API_BASE_URL + '/comments'
 
-
-
-const loadTodos=async () =>{
-    const response:TodoModel[] =    await fetch(endPointTodos)
+const loadTodos = async (): Promise<TodoModel[]> => {
+    return await fetch(endpointTodos)
         .then(value => value.json());
-
-    return response
 }
 
-const loadPosts = async (): Promise<PostModel[]> =>{
-    return await fetch(endPointPosts)
-        .then(value => value.json())
-}
-
-const loadComments = async (): Promise<CommentModel[]> =>{
-    return await fetch(endPointComments)
-        .then(value => value.json())
+const loadPosts = async (): Promise<PostModel[]> => {
+    const response: PostResponseDummyjson = await fetch(endpointPosts)
+        .then(value => value.json());
+    return response.posts;
 }
 
 
+const loadComments = async (): Promise<CommentModel[]> => {
+    return await fetch(endpointComments)
+        .then(value => value.json());
+}
 
 export {loadTodos, loadPosts, loadComments}
