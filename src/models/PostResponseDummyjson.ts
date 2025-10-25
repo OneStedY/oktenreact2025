@@ -1,8 +1,8 @@
-import {PostModel} from "./PostModel.ts";
+import type {PostModel} from "./PostModel.ts";
 
 export interface PostResponseDummyjson {
-    posts: PostModel[],
-    skip: number,
-    total: number,
-    limit: number
+    posts: PostModel[];
+    skip: number;
+    total: number;
+    limit: number;
 }

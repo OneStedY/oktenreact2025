@@ -1,7 +1,7 @@
-import {TodoModel} from "../models/TodoModel.ts";
-import {PostModel} from "../models/PostModel.ts";
-import {CommentModel} from "../models/CommentModel.ts";
-import {PostResponseDummyjson} from "../models/PostResponseDummyjson.ts";
+import type {TodoModel} from "../models/TodoModel.ts";
+import type {PostModel} from "../models/PostModel.ts";
+import type {CommentModel} from "../models/CommentModel.ts";
+import type {PostResponseDummyjson} from "../models/PostResponseDummyjson.ts";
 
 const endpointTodos = import.meta.env.VITE_API_BASE_URL + '/todos'
 const endpointPosts = import.meta.env.VITE_API_BASE_URL + '/posts'
