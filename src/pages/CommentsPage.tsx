@@ -1,5 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
+
 export const CommentsPage = () => (
+
     <>
         <h2>comments</h2>
         <nav>
@@ -8,3 +10,4 @@ export const CommentsPage = () => (
         <Outlet />
     </>
 );
+

@@ -4,39 +4,43 @@ import { HomePage } from "../pages/HomePage";
 import { UsersPage } from "../pages/UsersPage";
 import { PostsPage } from "../pages/PostsPage";
 import { CommentsPage } from "../pages/CommentsPage";
-import { JsonplaceholderPage } from "../pages/JsonplaceholderPage";
-import { DummyjsonPage } from "../pages/DummyjsonPage";
+import { UsersJsonplaceholderPage } from "../pages/UsersJsonplaceholderPage";
+import { UsersDummyjsonPage } from "../pages/UsersDummyjsonPage";
+import { PostsJsonplaceholderPage } from "../pages/PostsJsonplaceholderPage";
+import { PostsDummyjsonPage } from "../pages/PostsDummyjsonPage";
+import { CommentsJsonplaceholderPage } from "../pages/CommentsJsonplaceholderPage";
+import { CommentsDummyjsonPage } from "../pages/CommentsDummyjsonPage";
 
 export const routes = createBrowserRouter([
     {
         path: '/',
         element: <App/>,
         children: [
-            { index: true, element: <HomePage/> }, // Homepage
+            { index: true, element: <HomePage/> },
             {
-                path: 'users', // Users page
+                path: 'users',
                 element: <UsersPage/>,
                 children: [
-                    { path: 'dummyjson', element: <DummyjsonPage/> }, // Users -> dummyjson
-                    { path: 'jsonplaceholder', element: <JsonplaceholderPage/> }, // Users -> jsonplaceholder
+                    { path: 'jsonplaceholder', element: <UsersJsonplaceholderPage/> },
+                    { path: 'dummyjson', element: <UsersDummyjsonPage/> },
                 ],
             },
             {
-                path: 'posts', // Posts page
+                path: 'posts',
                 element: <PostsPage/>,
                 children: [
-                    { path: 'dummyjson', element: <DummyjsonPage/> },
-                    { path: 'jsonplaceholder', element: <JsonplaceholderPage/> },
+                    { path: 'jsonplaceholder', element: <PostsJsonplaceholderPage/> },
+                    { path: 'dummyjson', element: <PostsDummyjsonPage/> },
                 ],
             },
             {
-                path: 'comments', // Comments page
+                path: 'comments',
                 element: <CommentsPage/>,
                 children: [
-                    { path: 'jsonplaceholder', element: <JsonplaceholderPage/> },
+                    { path: 'jsonplaceholder', element: <CommentsJsonplaceholderPage/> },
+                    { path: 'dummyjson', element: <CommentsDummyjsonPage/> },
                 ],
             },
-            { path: '*', element: <></> }, // без страниц ошибок
         ],
     },
 ]);
