@@ -12,17 +12,17 @@ export const routes = createBrowserRouter([
         path: '/',
         element: <App/>,
         children: [
-            { index: true, element: <HomePage/> }, // Homepage
+            { index: true, element: <HomePage/> },
             {
-                path: 'users', // Users page
+                path: 'users',
                 element: <UsersPage/>,
                 children: [
-                    { path: 'dummyjson', element: <DummyjsonPage/> }, // Users -> dummyjson
-                    { path: 'jsonplaceholder', element: <JsonplaceholderPage/> }, // Users -> jsonplaceholder
+                    { path: 'dummyjson', element: <DummyjsonPage/> },
+                    { path: 'jsonplaceholder', element: <JsonplaceholderPage/> },
                 ],
             },
             {
-                path: 'posts', // Posts page
+                path: 'posts',
                 element: <PostsPage/>,
                 children: [
                     { path: 'dummyjson', element: <DummyjsonPage/> },
@@ -30,13 +30,12 @@ export const routes = createBrowserRouter([
                 ],
             },
             {
-                path: 'comments', // Comments page
+                path: 'comments',
                 element: <CommentsPage/>,
                 children: [
                     { path: 'jsonplaceholder', element: <JsonplaceholderPage/> },
                 ],
             },
-            { path: '*', element: <></> }, // без страниц ошибок
         ],
     },
 ]);
