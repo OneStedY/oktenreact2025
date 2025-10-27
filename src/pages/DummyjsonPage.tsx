@@ -1,0 +1,1 @@
+export const DummyjsonPage = () => <h3>dummyjson</h3>;
