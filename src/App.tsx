@@ -1,13 +1,16 @@
-
+import {Menu} from "./components/menu/Menu.tsx";
 import './App.css'
-import {FamilyComponent} from "./components/family-component/FamilyComponent.tsx";
+import {Outlet} from "react-router-dom";
+
 
 function App() {
 
 
   return (
     <>
-      <FamilyComponent/>
+        <Menu/>
+        This is app component
+        <Outlet/>
     </>
   );
 }
