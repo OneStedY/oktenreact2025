@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import type {IUser} from "../../model/IUser.ts";
 import type {IUserResponseModel} from "../../model/IUserResponseModel.ts";
+import {UserComponent} from "./UserComponent.tsx";
 
 export const UsersComponent = () => {
     const [users, setUsers]=useState<IUser[]>([])
@@ -15,7 +16,9 @@ export const UsersComponent = () => {
     }, []);
     return (
         <div>
-            {}
+            {
+                <UserComponent/>
+            }
         </div>
     );
 };

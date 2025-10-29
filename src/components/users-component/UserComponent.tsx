@@ -1,4 +1,9 @@
-const U
+import type {IUser} from "../../model/IUser.ts";
+
+
+interface UserComponentProps {
+    user: IUser
+}
 
 export const UserComponent = ({user}: UserComponentProps) => {
     return (
