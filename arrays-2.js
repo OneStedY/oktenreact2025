@@ -269,7 +269,7 @@ let usersList = [
         company: {
             name: 'Robel-Corkery',
             catchPhrase: 'Multi-tiered zero tolerance productivity',
-            bs: 'transition cutting-edge web services'
+            bs: 'transition cutting-edge web service'
         }
     },
     {
