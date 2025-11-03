@@ -1,10 +1,15 @@
+import './App.css';
 import {Outlet} from "react-router";
-import {MenuComponent} from "../components/menu/MenuComponent.tsx";
 
-export const MainLayout = () => {
-    return <>
-        <MenuComponent/>
-        <Outlet/>
-    </>;
+function MainLayout() {
+
+
+    return (
+        <>
+            main page
+            <Outlet/>
+        </>
+    );
 }
 
+export default MainLayout
