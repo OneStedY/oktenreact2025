@@ -1,15 +1,21 @@
+import { useState } from "react";
+import Child from "./Child";
 
-import './App.css'
+export default function App() {
+  const [count, setCount] = useState(0);
+  const [title, setTitle] = useState("Hello");
 
-
-function App() {
-
+  console.log("App render");
 
   return (
-    <>
+      <div style={{ display: "grid", gap: 12, padding: 16 }}>
+        <button onClick={() => setCount((c) => c + 1)}>
+          Increase count: {count}
+        </button>
 
-    </>
+        <input value={title} onChange={(e) => setTitle(e.target.value)} />
+
+        <Child title={title} />
+      </div>
   );
 }
-
-export default App
